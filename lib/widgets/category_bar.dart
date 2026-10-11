@@ -20,7 +20,7 @@ class CategoryBar extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: Row(
           spacing: 8,
           children: List.generate(categories.length, (index) {
