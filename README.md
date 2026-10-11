@@ -1,17 +1,25 @@
-# dm_restaurant
+# Gold BBQ — Menu du restaurant
 
-A new Flutter project.
+Application Flutter qui affiche le menu d'un restaurant de barbecue coréen.
 
-## Getting Started
+![Capture d'écran](docs/capture.png)
 
-This project is a starting point for a Flutter application.
+## Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+- Catégories défilables horizontalement (Row dans un SingleChildScrollView)
+- Liste verticale des plats de la catégorie choisie (ListView.builder)
+- Carte de plat réutilisable : photo, nom, prix, description
+- Portrait : 1 colonne. Paysage : 2 colonnes
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Organisation du code
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `lib/main.dart` : thème et lancement de l'app
+- `lib/models/dish.dart` : ce qu'est un plat, et l'enum des catégories
+- `lib/data/menu_data.dart` : la liste des plats
+- `lib/screens/menu_screen.dart` : l'écran et la sélection de catégorie
+- `lib/widgets/` : barre de catégories, liste et carte de plat
+
+## Lancer le projet
+
+    flutter pub get
+    flutter run
