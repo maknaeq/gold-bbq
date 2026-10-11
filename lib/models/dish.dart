@@ -1,3 +1,17 @@
+// Ici l'enum permet d'être plus résilient sur le type de la catégorie à travers la definition de la class et lors de la créations des données dans /data/menu_data.dart
+enum DishCategory {
+  formules("Formules"),
+  entrees("Entrées"),
+  barbecue('Barbecue'),
+  plats("Plats"),
+  desserts("Desserts"),
+  boissons("Boissons");
+
+  final String label;
+
+  const DishCategory(this.label);
+}
+
 class Dish {
 
   const Dish({
@@ -12,9 +26,9 @@ class Dish {
   final String description;
   final double price;
   final String image;
-  final String category;
+  final DishCategory category; // Utilisation de l'enum créé précédemment
 
-  String get imagePath => 'assets/images/$image';
+  String get imagePath => "assets/images/$image";
 
-  String get formattedPrice => '${price.toStringAsFixed(2).replaceAll('.', ',')}€';
+  String get formattedPrice => "${price.toStringAsFixed(2).replaceAll(".", ",")} €";
 }
